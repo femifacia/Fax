@@ -9,7 +9,7 @@
 
 void print_help(void)
 {
-    printf("USAGE: ./myteams_server port\n");
+    printf("USAGE: ./fax_server port\n");
     printf("\tport is the port number on which");
     printf(" the server socket listens.\n");
     exit(0);
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 
     if (argc != 2)
         return (84);
-    if (!strcmp(argv[1], "-help"))
+    if (!strcmp(argv[1], "-help") || !strcmp(argv[1], "-h") || !strcmp(argv[1], "-help"))
         print_help();
     check_error(argv);
     control = initialize_control(argv[1]);

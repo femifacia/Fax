@@ -9,7 +9,7 @@
 
 void print_help(void)
 {
-    printf("USAGE: ./myteams_cli ip port\n");
+    printf("USAGE: ./fax_cli ip port\n");
     printf("\tip is the server ip address on");
     printf(" which the server socket listens\n");
     printf("\tport is the port number on");
@@ -41,7 +41,7 @@ int main(int argc, char **argv)
     t_client client;
 
     if (argc == 2) {
-        if (!strcmp(argv[1], "-help"))
+        if (!strcmp(argv[1], "--help") || !strcmp(argv[1], "-h") || !strcmp(argv[1], "-help"))
             print_help();
     }
     check_error(argc, argv);
