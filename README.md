@@ -29,8 +29,8 @@ When **fax_server** users can launch **fax_client** to start texting with others
 
 Minimum required
 
-- Make 4.3
-- gcc 10.3.0
+- **Make** 4.3
+- **gcc** 10.3.0
 
 ## How to build
 
@@ -38,7 +38,7 @@ Minimum required
 
 At the root of the repository, go to **linux** directory
 
-tape
+type
 
     make re
 
@@ -62,7 +62,7 @@ Since **fax_server** is launched on a port users can now use **fax_cli** to text
 
 **fax_cli** is a shell prompt which allow you to text, chat and more with others.
 
-When **fax_cli** is launched you can tape
+When **fax_cli** is launched you can type
 
     /help
 
