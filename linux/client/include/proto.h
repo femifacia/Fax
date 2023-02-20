@@ -9,6 +9,7 @@
     #define CHECK_PROTO 5
 #include "libra.h"
 #include "structure.h"
+void print_prompt(t_client *client);
 void launch_messages(t_client *client, char **arg);
 void recv_send(char **arg);
 void launch_send(t_client *client, char **arg);

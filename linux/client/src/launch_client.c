@@ -74,6 +74,7 @@ void launch_client(t_client *client)
     int ret = 0;
 
     while (client->is_connected) {
+        print_prompt(client);
         FD_ZERO(&client->set);
         FD_SET(0, &client->set);
         FD_SET(client->fd, &client->set);

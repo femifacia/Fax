@@ -7,23 +7,23 @@
 
 #include "../include/my.h"
 
-void print_help(void)
+void print_help(int ret_val)
 {
     printf("USAGE: ./fax_cli ip port\n");
     printf("\tip is the server ip address on");
     printf(" which the server socket listens\n");
     printf("\tport is the port number on");
     printf(" which the server socket listens\n");
-    exit(0);
+    exit(ret_val);
 }
 
 void check_error(int argc, char **argv)
 {
     if (argc != 3)
-        exit(84);
+        print_help(84);
     for (int i = 0; argv[2][i]; i++) {
         if (argv[2][i] < '0' || argv[2][i] > '9')
-            exit(84);
+            print_help(84);
     }
 }
 
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 
     if (argc == 2) {
         if (!strcmp(argv[1], "--help") || !strcmp(argv[1], "-h") || !strcmp(argv[1], "-help"))
-            print_help();
+            print_help(0);
     }
     check_error(argc, argv);
     memset(&client, 0, sizeof(t_client));
